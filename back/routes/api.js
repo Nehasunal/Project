@@ -7,7 +7,7 @@ const multer = require('multer');
 //////////
 
 const {Pool,Client}=require('pg')
-const connectionString='postgressql://postgres:root@localhost:5432/test'
+const connectionString='postgressql://postgres:root@localhost:5432/db_name'
 const client=new Client({
   connectionString:connectionString
 })
@@ -123,13 +123,13 @@ rel="nofollow">Reset password</a>
     sendgridTransport({
 
     auth:{
-      api_key:"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"
+      api_key:"SG.5MfNGmeSTTaMxrDtLRYU___YOUR_API_KEY___duV_YxZStNdnnWtbrXNwiVIZNo"
     }
   }));
 ////
 
   let mailOptions = {
-    from: 'fresherhack0@gmail.com',//sender email
+    from: 'abc@gmail.com',//sender email
     to: user.email,//user email
     subject: "Welcome ",
     html:htmlTemp,
