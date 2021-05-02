@@ -1,0 +1,67 @@
+<div class="container-fluid">
+<app-alerts></app-alerts>
+<div class="panel panel-default">
+ <div class="panel-heading"><h1>Edit User</h1></div>
+ <div class="panel-body">
+   <form [formGroup]="editEmp" (ngSubmit)="updateUser()" ><br><br>
+     <!-- (submit)="updateEmployee()" -->
+<div class="form-group">
+   <label for="emp_name" class="col-sm-2 control-label">Name</label>
+   <div class="col-sm-9">
+     <input type="text" class="form-control" name="name"
+      formControlName="name" required
+>
+<div *ngIf="f.name.touched">
+  <p *ngIf="f.name.errors?.required">Name is a required field!</p>
+
+</div>
+
+</div>
+ </div>
+
+ <div class="form-group">
+   <label for="email" class="col-sm-2 control-label">Email </label>
+   <div class="col-sm-9">
+     <input type="email" class="form-control" name="email"
+       formControlName="email"
+     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        required >
+
+        <div *ngIf="f.email.touched">
+          <p *ngIf="f.email.errors?.required">Email is a required field!</p>
+          <p *ngIf="f.email.errors?.pattern">This is not a valid Email!!!</p>
+        </div>
+   </div>
+ </div>
+ <div class="form-group">
+   <label for="description" class="col-sm-2 control-label">Description </label>
+   <div class="col-sm-9">
+     <input type="text" class="form-control" name="description" formControlName="description" required>
+     <div *ngIf="f.description.touched">
+       <p *ngIf="f.description.errors?.required">Description is a required field!</p>
+
+     </div>
+   </div>
+ </div>
+
+
+ <div class="form-group">
+   <div class="col-sm-offset-2 col-sm-8">
+     <button type="submit" class="btn btn-success"
+     [disabled]="!editEmp.valid">Update</button>
+
+     <div class="col-sm-offset-2 col-sm-4">
+       <button type="submit" class="btn btn-success" click=goBack()>Back</button>
+
+   </div>
+
+ </div>
+
+
+ </div>
+</form>
+
+ </div>
+</div>
+
+</div>

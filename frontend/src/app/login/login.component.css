@@ -1,0 +1,21 @@
+
+
+input{
+  color:black!important;
+
+    line-height: 1rem;
+    padding-top:1rem;
+
+}
+mat-card{
+  width:500px;
+
+}
+.required::after {     content: " *";     color: red; }
+.hasError::after{ content: "*"; color:red;}
+.form-control.ng-invalid ~ label.checkbox-inline::after {     content: " *";     color: red; }
+
+
+mat-form-field {
+    margin-bottom: 1rem;
+}

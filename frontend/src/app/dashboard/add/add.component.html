@@ -1,0 +1,112 @@
+<div class="container-fluid mt-4">
+<app-alerts></app-alerts>
+<div class="row">
+
+<div class="col-lg-6">
+  <div class="container-fluid mt-4">
+    <div style="text-align: center">
+    <form>
+      <div>
+        <input type="file"  name="image" (change)="selectImage($event)" />
+<br>
+<br>
+<!-- <img  class="mythumbnail" [src]="readimages||'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png'" /> -->
+<div class="text-center col-md-8">
+
+              <h5>Crop Image</h5>
+              <image-cropper
+              [imageChangedEvent]="imageChangedEvent"
+              [maintainAspectRatio]="true"
+              [aspectRatio]="4 / 4"
+              [resizeToWidth]="256"
+              format="png"
+              (imageCropped)="imageCropped($event)"
+              (imageLoaded)="imageLoaded()"
+              (cropperReady)="cropperReady()"
+              (loadImageFailed)="loadImageFailed()"></image-cropper>
+</div>
+<div class="text-center col-md-8">
+  <h5>preview</h5>
+<img [src]="croppedImage" />  <!-- Image Preview -->
+</div>
+ </div>
+      <br>
+      <div>
+        <button type="submit" (click)="onSubmit()">Upload</button>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+<div class="col-lg-6">
+
+<div class="panel panel-default">
+  <div class="panel-heading">Add User </div>
+  <br>
+  <br>
+  <div class="panel-body">
+    <form class="form-horizontal" (submit)="addUser()" #f="ngForm">
+  <div class="form-group">
+    <label for="emp_name" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control"  [(ngModel)]="model.name" name="name" #name="ngModel" required>
+<div *ngIf="name.touched">
+  <p *ngIf="name.errors?.required">Name is a required field!</p>
+
+</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email" class="col-sm-2 control-label">Email </label>
+    <div class="col-sm-9">
+      <input type="email" class="form-control" [(ngModel)]="model.email" name="email" #email="ngModel"
+  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+     required >
+
+     <div *ngIf="email.touched">
+       <p *ngIf="email.errors?.required">Email is a required field!</p>
+       <p *ngIf="email.errors?.pattern">This is not a valid Email!!!</p>
+     </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password" class="col-sm-2 control-label">Password </label>
+    <div class="col-sm-9">
+      <input type="password" class="form-control" [(ngModel)]="model.password" name="password" #pwd="ngModel" required>
+      <div *ngIf="pwd.touched">
+        <p *ngIf="pwd.errors?.required">Password is a required field!</p>
+
+      </div>
+       </div>
+  </div>
+  <div class="form-group">
+    <label for="title" class="col-sm-2 control-label">Description</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" [(ngModel)]="model.description" name="description" #desc="ngModel" required>
+      <div *ngIf="desc.touched">
+        <p *ngIf="desc.errors?.required">Description is a required field!</p>
+
+      </div>
+    </div>
+  </div>
+
+<br>
+<br>
+<br>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+      <button type="submit" class="btn btn-success" [disabled]="!f.form.valid"> Save</button>
+      <!-- <a  class="btn btn-info" (click)="goBack()"> Cancel</a> -->
+    </div>
+
+  </div>
+</form>
+
+  </div>
+</div>
+</div>
+</div>
+
+</div>
