@@ -68,5 +68,5 @@ localStorage.setItem('token', (this.users.token).toString())
 
 
 }
-module.exports=router;
+
 }
