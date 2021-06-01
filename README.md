@@ -16,5 +16,6 @@ This is a web based application on technology Angular, Nodejs, Express and postg
 8.Change status (Active/Inactive)
 9.File Upload using Multer
 
+# Screenshots
 
 ![Image of Yaktocat](https://github.com/Nehasunal/Project/blob/master/frontend/src/assets/Screenshot%20(144).png)
