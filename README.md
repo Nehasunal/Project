@@ -18,13 +18,15 @@ This is a web based application on technology Angular, Nodejs, Express and postg
 
 # Screenshots
 
-![Image of Yaktocat](https://github.com/Nehasunal/Project/blob/master/frontend/src/assets/Screenshot%20(144).png)
+![Image of Yaktocat](https://github.com/Nehasunal/Project/blob/master/frontend/src/assets/Screenshot%20(143).png)
 
 ![Image of Yaktocat](https://github.com/Nehasunal/Project/blob/master/frontend/src/assets/Screenshot%20(180).png)
 
 ![Image of Yaktocat](https://github.com/Nehasunal/Project/blob/master/frontend/src/assets/Screenshot%20(181).png)
 
 ![Image of Yaktocat](https://github.com/Nehasunal/Project/blob/master/frontend/src/assets/Screenshot%20(184).png)
+
+![Image of Yaktocat](https://github.com/Nehasunal/Project/blob/master/frontend/src/assets/Screenshot%20(144).png)
 
 ![Image of Yaktocat](https://github.com/Nehasunal/Project/blob/master/frontend/src/assets/Screenshot%20(145).png)
 
